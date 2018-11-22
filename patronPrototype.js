@@ -47,6 +47,7 @@ function SuperHero(apellido,nombre,powers)
 //Esta linea es la que crea la herencia con Persona
 //Coge todo el prototype que tiene Persona
 //En el prototype de Persona estan todos sus metodos
+
 /*IMPORTANTE: Si no hacemos Object.create() todos los
 metodos que añadamos en el prototype de SuperHero se
 añadiran al prototype de Persona tambien por lo tanto
@@ -63,3 +64,9 @@ SuperHero.prototype.getPowers = function(){
 let heroe = new SuperHero('Dominguez',"Batman","ninguno churra lo que tiene es dinero");
 
 console.log(heroe);
+
+/*IMPORTANTE:
+cuando se crea un nuevo objeto/clase, los métodos normalmente
+deberían asociarse al prototipo del objeto en vez de definirse en el constructor del objeto.
+La razón es que con este último sistema, cada vez que se llama al constructor 
+(cada vez que se crea un objeto) se tienen que reasignar los métodos. */
